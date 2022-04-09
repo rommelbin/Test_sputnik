@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\interfaces\ILuckyNumberRepository;
-use App\interfaces\ILuckyNumberService;
-use App\repositories\LuckyNumberRepository;
-use App\services\LuckyNumberService;
+use App\interfaces\ILuckyTicketRepository;
+use App\interfaces\ILuckyTicketService;
+use App\repositories\LuckyTicketRepository;
+use App\services\LuckyTicketService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -17,8 +17,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(ILuckyNumberRepository::class, LuckyNumberRepository::class);
-        $this->app->bind(ILuckyNumberService::class, LuckyNumberService::class);
+        $this->app->bind(ILuckyTicketRepository::class, LuckyTicketRepository::class);
+        $this->app->bind(ILuckyTicketService::class, LuckyTicketService::class);
 
     }
 

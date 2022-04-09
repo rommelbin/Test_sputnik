@@ -13,11 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lucky_numbers', function (Blueprint $table) {
-            $table->id();
-            $table->integer('number');
-            $table->timestamps();
-        });
+        Schema::rename('lucky_numbers', 'lucky_tickets');
     }
 
     /**
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lucky_numbers');
+        Schema::rename('lucky_tickets', "lucky_numbers");
     }
 };

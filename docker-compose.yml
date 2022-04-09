@@ -17,7 +17,6 @@ services:
           DB_USERNAME: postgres
           DB_PASSWORD: password
           WAIT_HOSTS: postgres:5432
-          JWT_SECRET: gzBRkDUp5jBzJ2xUirx2iJjFXY5lVZ55XPTTaFKh0y5gOEYQuvBu47ujG4n86J5K
   postgres:
     image: postgres
     restart: unless-stopped

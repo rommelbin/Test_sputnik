@@ -2,13 +2,13 @@
 
 namespace App\interfaces;
 
-use App\services\LuckyNumberService;
+use App\services\LuckyTicketService;
 
-interface ILuckyNumberService
+interface ILuckyTicketService
 {
-    public function randNumber(): int;
+    public function randTicket(): int;
     public function isLucky(): bool;
-    public function divideNumber(): LuckyNumberService;
+    public function divideNumber(): LuckyTicketService;
     public function checkLuckyTicket(string $lucky_ticket): bool;
     public function compare(array $data): bool;
 }
